@@ -12,7 +12,7 @@ It does one simple job: local socks5 => shadowrocket subscription. That's it.
 
 ## Installation
 
-> Dependency: sudo pacman -S fish python v2ray shadowsocks-rust
+> Dependency: `sudo pacman -S fish python v2ray shadowsocks-rust jq`
 
 1. Copy `proxy.fish` and `lib` into your PATH.
 2. (Optional) Copy `completions` into `~/.config/fish/completions`.
