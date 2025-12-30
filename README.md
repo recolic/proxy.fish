@@ -4,11 +4,22 @@ a very minimal command line tool to manage your proxy. Designed for linux termin
 
 It does one simple job: local socks5 => shadowrocket subscription. That's it.
 
-## Recommended Usage
+## Demo Video: Recommended Usage
 
 > Enjoy with SwitchyOmega / ProxyChains / Graftcp ...
 
 <video src="https://recolic.net/res/recording-proxy-fish-usage.mp4">Demo Video, [Click here](https://recolic.net/res/recording-proxy-fish-usage.mp4) if it doesn't load</video>
+
+<video src="https://recolic.net/res/recording-proxy-fish-usage.mp4"></video>
+
+
+## Installation
+
+> Dependency: fish, python
+
+1. Copy `proxy.fish` and `lib` into your PATH.
+2. (Optional) Copy `completions` into `~/.config/fish/completions`.
+3. Enjoy
 
 ## supported scenario
 
