@@ -1,7 +1,19 @@
 # a minimal proxy tool for linux command line
 
-> supporting: shadowsocket subscription url, v2ray (vmess, vless), shadowsocks, ssh proxy
-
 a very minimal command line tool to manage your proxy. Designed for linux terminal user!
 
+It does one simple job: local socks5 => shadowrocket subscription. That's it.
+
+## Recommended Usage
+
+> Enjoy with SwitchyOmega / ProxyChains / Graftcp ...
+
+<video src="https://recolic.net/res/recording-proxy-fish-usage.mp4">Demo Video, [Click here](https://recolic.net/res/recording-proxy-fish-usage.mp4) if it doesn't load</video>
+
+## supported scenario
+
+1. shadowrocket format subscription url (base64 encoded lines)
+2. protocol: v2ray (vmess, vless), shadowsocks, ssh proxy
+3. will use native shadowsocks client is possible, v2ray as fallback.
+4. common vless args supported (such as allow-insecure, SNI spoof), reality or other x-ray trick not supported
 
