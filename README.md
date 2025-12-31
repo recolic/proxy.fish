@@ -8,7 +8,7 @@ It does one simple job: local socks5 => shadowrocket subscription. That's it.
 
 > Enjoy with SwitchyOmega / ProxyChains / Graftcp ...
 
-Demo Video, [Click here](https://recolic.net/res/recording-proxy-fish-usage.mp4) if it doesn't load
+![Demo Video, [Click here](https://recolic.net/res/recording-proxy-fish-usage.mp4) if fails to load](https://recolic.net/res/recording-proxy-fish-usage.avif)
 
 ## Installation
 
