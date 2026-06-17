@@ -1,5 +1,5 @@
 #!/usr/bin/fish
-# v1.08.202512
+# v1.08.202606
 
 set script_dir (dirname (status --current-filename))
 function download_subs
@@ -10,7 +10,7 @@ function download_subs
     
     for URL in (string split " " -- $SUB_URLS)
         echo "DOWNLOAD SUBS : $URL" 1>&2
-        curl -s "$URL" | base64 -d | dos2unix | while read -l line
+        curl -s --user-agent "Shadowrocket/2701 CFNetwork/3826.600.41 Darwin/24.6.0 iPhone16,1" "$URL" | base64 -d | dos2unix | while read -l line
             echo "$line" | grep "://" > /dev/null 2>&1 ; or continue
             set name (python $script_dir/lib/proxy-url-to-name.py "$line")
                 and echo "$name $line"
@@ -100,9 +100,9 @@ set -q argv[2]; and set port $argv[2]; or set port 1080
 
 if not test -e $cache_file || test (math (date +%s) - (stat -c %Y $cache_file)) -gt 604800
     echo "cache file not exist or older than 7 days. downloading $cache_file..."
-    mkdir -p $HOME/.cache ; rm -f $cache_file
-    download_subs > $cache_file
-    grep . $cache_file > /dev/null ; or rm -f $cache_file
+    mkdir -p $HOME/.cache
+    download_subs > $cache_file.tmp
+    grep . $cache_file.tmp > /dev/null ; and mv $cache_file.tmp $cache_file
 end
 
 if test -f $node
